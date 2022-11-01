@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="dmaq"
+            type="com.kd.appaks.Dmaq" />
+
+        <variable
+            name="tf"
+            type="android.graphics.Typeface" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="256px"
+        android:layout_height="108px"
+        android:background="#000"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="地表温度:"
+            android:textColor="#f00"
+            android:textSize="@dimen/firstTextSize"
+            app:setExtraTypeface="@{tf}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="地温"
+                    android:textColor="#f00"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`10CM:`+dmaq.co}"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`20CM:`+dmaq.pm25}"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="土壤水分"
+                    android:textColor="#f00"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`10CM:`+dmaq.o3}"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`20CM:`+dmaq.pm10}"
+                    android:textColor="#f00"
+                    android:textSize="@dimen/firstTextSize"
+                    app:setExtraTypeface="@{tf}" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
